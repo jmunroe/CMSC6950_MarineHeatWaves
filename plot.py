@@ -1,4 +1,7 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
-plt.plot([1,4,2], [2,5,3])
+data = np.loadtxt('data.txt')
+
+plt.plot(data[:,0], data[:, 1])
 plt.savefig('myplot.png')
