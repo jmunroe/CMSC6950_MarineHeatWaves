@@ -1,10 +1,16 @@
-FIGURES=sst_timeseries.png
+FIGURES=sst_timeseries.png qc_sst_timeseries.png filtered_sst_timeseries.png
 
 report.pdf: report.tex $(FIGURES) marineHeatWaves.py
 	latexmk -pdf
 
 sst_timeseries.png: sst_timeseries.py data.csv
 	python sst_timeseries.py
+
+qc_sst_timeseries.png: qc_sst_timeseries.py data.csv
+	python qc_sst_timeseries.py
+
+filtered_sst_timeseries.png: filtered_sst_timeseries.py data.csv
+	python filtered_sst_timeseries.py
 
 c44255.csv:
 	curl -O http://www.meds-sdmm.dfo-mpo.gc.ca/alphapro/wave/waveshare/csvData/c44255_csv.zip
