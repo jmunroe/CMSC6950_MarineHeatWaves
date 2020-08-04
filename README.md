@@ -9,10 +9,13 @@ paper: Hobday, A.J. et al. (2016), A hierarchical approach to defining marine he
 
 Data source:
 
-https://www.smartatlantic.ca/erddap/tabledap/SMA_Fortune_Bay_Buoy.html
+http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/waves-vagues/data-donnees/index-eng.asp
 
 https://podaac.jpl.nasa.gov/SeaSurfaceTemperature
 
 ## Dependencies
 
+- matplotlib
+- pandas
+- numpy
 
