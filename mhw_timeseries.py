@@ -19,17 +19,6 @@ plt.title('SST (black), seasonal climatology (blue), '
 #plt.xlim(t[0], t[-1])
 plt.ylim(sst.min()-0.5, sst.max()+0.5)
 plt.ylabel(r'SST [$^\circ$C]')
-
-for e in range(mhws['n_events']):
-   # plt.axvline(date.fromordinal(mhws['time_start'][e]))
-    if e == ev:
-        color = color=(1,0.6,0.5)
-    else:
-        color = color='r'
-    plt.axvspan(date.fromordinal(mhws['time_start'][e]), 
-                date.fromordinal(mhws['time_end'][e]),
-               color=color)
-   
     
 plt.subplot(2,1,2)
 # Find indices for all ten MHWs before and after event of interest and shade accordingly
@@ -53,4 +42,4 @@ plt.xlim(date.fromordinal(mhws['time_start'][ev]-100),
 plt.ylim(clim['seas'].min() - 1, clim['seas'].max() + mhws['intensity_max'][ev] + 0.5)
 plt.ylabel(r'SST [$^\circ$C]')
 
-plt.savefig('plot.png')
+plt.savefig('mhw_timeseries.png')

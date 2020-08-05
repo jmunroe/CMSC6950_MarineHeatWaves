@@ -1,5 +1,5 @@
 FIGURES=sst_timeseries.png qc_sst_timeseries.png filtered_sst_timeseries.png \
-        plot.png
+        mhw_timeseries.png mhw_distribution.png
 
 report.pdf: report.tex $(FIGURES) marineHeatWaves.py
 	latexmk -pdf
@@ -13,8 +13,11 @@ qc_sst_timeseries.png: qc_sst_timeseries.py data.csv
 filtered_sst_timeseries.png: filtered_sst_timeseries.py data.csv
 	python filtered_sst_timeseries.py
 
-plot.png: mhws_data.pkl
-	python plot.py
+mhw_timeseries.png: mhws_data.pkl mhw_timeseries.py
+	python mhw_timeseries.py
+
+mhw_distribution.png: mhws_data.pkl mhw_distribution.py
+	python mhw_distribution.py
 
 mhws_data.pkl: process_data.py data.csv
 	python process_data.py
