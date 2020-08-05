@@ -37,9 +37,12 @@ marineHeatWaves.py:
 .PHONY: clean almost_clean
 
 clean: almost_clean
-	rm c44255.csv
-	rm report.pdf
-	rm $(FIGURES)
+	rm -f $(FIGURES)
+	rm -f report.pdf
 
 almost_clean:
 	latexmk -c
+	rm -rf __pycache__
+	rm -f c44255.csv
+	rm -f data.csv
+	rm -f mhws_data.pkl
