@@ -1,7 +1,9 @@
 # CMSC6950 Marine Heat Waves
 ## James Munroe
 
-Run `make` to build the project report.
+This project looks for marine heat waves off the south short of Newfoundland using the historical record of Meteorological Service of Canada marine buoy.
+
+Run `make` to redo the analysis and build the project report.
 
 software: https://github.com/ecjoliver/marineHeatWaves
 
@@ -11,11 +13,10 @@ Data source:
 
 http://www.meds-sdmm.dfo-mpo.gc.ca/isdm-gdsi/waves-vagues/data-donnees/index-eng.asp
 
-https://podaac.jpl.nasa.gov/SeaSurfaceTemperature
-
 ## Dependencies
 
 - matplotlib
 - pandas
 - numpy
+- scipy
 
